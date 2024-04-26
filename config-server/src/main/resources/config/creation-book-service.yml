@@ -1,0 +1,20 @@
+server:
+  port: 8090
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    enabled: true
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+spring:
+  application:
+    name: creation-book-service
+#  kafka:
+#    producer:
+#      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+#      #      value-serializer: "org.springframework.kafka.support.serializer.JsonSerializer"
+#      #      value-serializer: "org.apache.kafka.common.serialization.ByteArraySerializer"
+#      value-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+#      bootstrap-servers: "localhost:9092"
